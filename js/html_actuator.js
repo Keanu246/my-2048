@@ -34,17 +34,18 @@ function HTMLActuator() {
 
   if (params.t && params.t !== undefined) {
     document.querySelector(".var-t")     .value = params.t;
+    document.querySelector(".var-v1")    .value = params.v1;
     document.querySelector(".var-v2")    .value = params.v2;
-    document.querySelector(".var-v4")    .value = params.v4;
-    document.querySelector(".var-v8")    .value = params.v8;
-    document.querySelector(".var-v16")   .value = params.v16;
-    document.querySelector(".var-v32")   .value = params.v32;
-    document.querySelector(".var-v64")   .value = params.v64;
-    document.querySelector(".var-v128")  .value = params.v128;
-    document.querySelector(".var-v256")  .value = params.v256;
-    document.querySelector(".var-v512")  .value = params.v512;
-    document.querySelector(".var-v1024") .value = params.v1024;
-    document.querySelector(".var-v2048") .value = params.v2048;
+    document.querySelector(".var-v3")    .value = params.v3;
+    document.querySelector(".var-v4")   .value = params.v4;
+    document.querySelector(".var-v5")   .value = params.v5;
+    document.querySelector(".var-v6")   .value = params.v6;
+    document.querySelector(".var-v7")  .value = params.v7;
+    document.querySelector(".var-v8")  .value = params.v8;
+    document.querySelector(".var-v9")  .value = params.v9;
+    document.querySelector(".var-v10") .value = params.v10;
+    document.querySelector(".var-v11") .value = params.v11;
+    document.querySelector(".var-v12") .value = params.v12;
     document.querySelector(".var-m")     .value = params.m;
     document.querySelector(".var-w")     .value = params.w;
     document.querySelector(".var-o")     .value = params.o;
@@ -103,23 +104,24 @@ HTMLActuator.prototype.addTile = function (tile) {
   // We can't use classlist because it somehow glitches when replacing classes
   var classes = ["tile", "tile-" + tile.value, positionClass];
 
-  if (tile.value > 2048) classes.push("tile-super");
+  if (tile.value > 12) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
 
-       if (tile.value == 2   ) inner.textContent = params.v2
-  else if (tile.value == 4   ) inner.textContent = params.v4
-  else if (tile.value == 8   ) inner.textContent = params.v8
-  else if (tile.value == 16  ) inner.textContent = params.v16
-  else if (tile.value == 32  ) inner.textContent = params.v32
-  else if (tile.value == 64  ) inner.textContent = params.v64
-  else if (tile.value == 128 ) inner.textContent = params.v128
-  else if (tile.value == 256 ) inner.textContent = params.v256
-  else if (tile.value == 512 ) inner.textContent = params.v512
-  else if (tile.value == 1024) inner.textContent = params.v1024
-  else if (tile.value == 2048) inner.textContent = params.v2048
+       if (tile.value == 1   ) inner.textContent = params.v1
+  else if (tile.value == 2   ) inner.textContent = params.v2
+  else if (tile.value == 3   ) inner.textContent = params.v3
+  else if (tile.value == 4  ) inner.textContent = params.v4
+  else if (tile.value == 5  ) inner.textContent = params.v5
+  else if (tile.value == 6  ) inner.textContent = params.v6
+  else if (tile.value == 7 ) inner.textContent = params.v7
+  else if (tile.value == 8 ) inner.textContent = params.v8
+  else if (tile.value == 9 ) inner.textContent = params.v9
+  else if (tile.value == 10) inner.textContent = params.v10
+  else if (tile.value == 11) inner.textContent = params.v11
+  else if (tile.value == 12) inner.textContent = params.v12
   else                         inner.textContent = params.m;
 
        if (inner.textContent.length > 4) inner.classList.add("tile-len-5")
