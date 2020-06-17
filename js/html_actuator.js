@@ -30,7 +30,7 @@ function HTMLActuator() {
   this.score = 0;
 
   document.querySelector(".title").textContent = params.t;
-  document.querySelector(".tile-name").textContent = params.v2048;
+  document.querySelector(".tile-name").textContent = params.v12;
 
   if (params.t && params.t !== undefined) {
     document.querySelector(".var-t")     .value = params.t;
