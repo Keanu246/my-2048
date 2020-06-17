@@ -23,7 +23,10 @@
       </div>
     </div>
     <p class="game-intro">Join the numbers and get to the <strong class="tile-name"></strong> <strong>tile!</strong></p>
-
+    
+    <p id="upgrade-tiles"></p>
+    <button onclick="upgrade()">Upgrade for 100 score</button>
+	  
     <div class="game-container">
       <div class="game-message">
         <p></p>
@@ -70,7 +73,7 @@
     </p>
     <hr>
     <center><form class="var-form" action="index.html" method="get"><table>
-      <tr><td class="var-h">Title</td><td><input class="var var-t"     type="text" name="t"     value="2048"       /></td>
+      <tr><td class="var-h">Title</td><td><input class="var var-t"     type="text" name="t"     value="2048 Tiers List"       /></td>
           <td class="var-h">    F</td><td><input class="var var-v1"    type="text" name="v1"    value="F"          /></td></tr>
       <tr><td class="var-h">    E</td><td><input class="var var-v2"    type="text" name="v2"    value="E"          /></td>
           <td class="var-h">    D</td><td><input class="var var-v3"    type="text" name="v3"    value="D"          /></td></tr>
@@ -104,6 +107,7 @@
   <script src="js/html_actuator.js"></script>
   <script src="js/grid.js"></script>
   <script src="js/tile.js"></script>
+  <script src="js/upgrades.js"></script>
   <script src="js/local_score_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
